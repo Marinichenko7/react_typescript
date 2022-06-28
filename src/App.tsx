@@ -1,8 +1,8 @@
-import './App.css';
+import cl from './App.module.scss';
 
 function App() {
   return (
-    <div className="App">
+    <div className={cl.app}>
       Application
     </div>
   );
