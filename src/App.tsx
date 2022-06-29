@@ -1,12 +1,12 @@
 import cl from './App.module.scss';
-import { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import TodoForm from './components/TodoForm';
-import TodosList from './components/TodoList';
+import TodosList from './components/TodosList';
 import { useAppDispatch } from './hook'
 import { addTodo } from './store/todoSlice'
 
-const App = () => {
-    const [curentTodo, setCurentTodo] = useState('')
+const App:React.FC = () => {
+    const [ curentTodo, setCurentTodo ] = useState('')
     const dispatch = useAppDispatch()
 
     const addTodoItem = () => {
@@ -19,8 +19,8 @@ const App = () => {
         <div className={cl.container}>
             <div className={cl.content}>
                 <TodoForm
-                    updateText={setCurentTodo}
                     curentTodo={curentTodo}
+                    setCurentTodo={setCurentTodo}
                     addTodoItem={addTodoItem}
                 />
                 <TodosList />

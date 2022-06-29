@@ -3,20 +3,20 @@ import MyButton from '../UI/button/MyButton'
 import cl from './TodoForm.module.scss'
 
 interface TodoFormProps {
-    handleTextTodo: () => void,
+    setCurentTodo: (str: string) => void,
     curentTodo: string,
-    addTodo: (str: string) => void
+    addTodoItem: () => void,
 }
 
-const TodoForm: React.FC<TodoFormProps> = ({ handleTextTodo, curentTodo, addTodo }) => {
+const TodoForm: React.FC<TodoFormProps> = ({ curentTodo, setCurentTodo, addTodoItem }) => {
     return (
         <div className={cl.todoForm}>
             <MyTextarea
                 value={curentTodo}
                 placeholder='заметка...'
-                // onChange={(e) => handleTextTodo(e.target.value)}
+                onChange={(e) => setCurentTodo(e.currentTarget.value)}
             />
-            <MyButton onClick={addTodo}>Добавить</MyButton>
+            <MyButton onClick={addTodoItem}>Добавить</MyButton>
         </div>
     )
 }
