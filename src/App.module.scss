@@ -1,3 +1,17 @@
-.app {
-  text-align: center;
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  max-width: 630px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1 0 auto;
 }

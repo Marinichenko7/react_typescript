@@ -1,0 +1,16 @@
+.myTextarea{
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 20%);
+    border: 1px solid rgb(255 255 255 / 20%);
+    border-radius: 5px;
+    background: rgb(0 0 0 / 3%);
+    resize: none;
+    &:focus, &:active{
+        border: 1px solid rgb(0 0 0 / 20%);
+        background: rgb(0 0 0 / 0%);
+    }
+}

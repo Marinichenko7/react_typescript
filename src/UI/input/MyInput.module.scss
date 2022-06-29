@@ -1,0 +1,12 @@
+.myInput{
+    border: none;
+    margin-right: 10px;
+    padding: 8px 15px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    outline: none;
+    border-radius: 5px;
+    font-size: 14px;
+    &:hover, &:focus{
+        box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    }
+}

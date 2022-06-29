@@ -1,0 +1,74 @@
+.todoWraper {
+    display: inline-block;
+    padding: 15px;
+    margin: 5px;
+    max-width: 200px;
+    width: 100%;
+    background-color: rgb(33, 158, 167);
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+    color: white;
+    height: auto;
+    position: relative;
+    &:hover {
+        box-shadow: 3px 5px 10px 0px rgb(0 0 0 / 50%);
+        transform: scale(1.03, 1.03);
+    }
+}
+.todoText {
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    font-weight: 600;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+.labelBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.pseudoBox{
+    position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(241, 241, 241);
+    top: 0;
+    left: 0;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+.checkBox {
+    visibility: hidden;
+    width: 100%;
+}
+.checkBox:checked + .pseudoBox:after{
+    content: '\2714';
+    color: black;
+    position: absolute;
+    top: -3px;
+    left: 1px;
+}
+.removeTodo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: black;
+    font-weight: 600;
+    width: 20px;
+    height: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+    &:before{
+        content: '\2717';
+        position: absolute;
+        top: -4px;
+        right: 2px;
+    }
+}
